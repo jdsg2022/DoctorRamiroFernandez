@@ -8,9 +8,6 @@ public class Paciente {
     private String estadoCivil;
     private String direccion;
 
-    public Paciente() {
-    }
-
     public Paciente(int cc, String nombreCompleto, int edad,
             String fechaNacimiento, String estadoCivil,
                     String direccion) {
