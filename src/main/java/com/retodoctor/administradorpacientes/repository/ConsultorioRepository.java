@@ -20,4 +20,10 @@ public class ConsultorioRepository {
     public void agregarPaciente(){
 
     }
+    public void eliminarPaciente(){
+
+    }
+    public void actualizarDatos(){
+
+    }
 }
