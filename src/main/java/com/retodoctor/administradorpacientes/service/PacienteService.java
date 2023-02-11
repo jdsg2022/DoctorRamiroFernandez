@@ -14,16 +14,28 @@ public class PacienteService implements IPacienteService{
 
     @Override
     public Set<Paciente> pacientesRegistrados() {
-        return null;
+        return consultorioRepository.getListaPacientes();
     }
 
     @Override
     public Paciente agregarPaciente(Paciente paciente) {
-        return null;
+        Paciente pacientesRegistrados = new Paciente(
+            paciente.getCc(), paciente.getNombreCompleto(),
+            paciente.getEdad(), paciente.getFechaNacimiento(),
+            paciente.getEstadoCivil(), paciente.getDireccion());
+        consultorioRepository.agregarPaciente(pacientesRegistrados);
+        return pacientesRegistrados;
     }
 
     @Override
     public Paciente eliminarPaciente(Paciente paciente) {
-        return null;
+        consultorioRepository.eliminarPaciente(paciente);
+        return paciente;
+    }
+
+    @Override
+    public Paciente actualizarDatosPaciente(Paciente paciente) {
+        consultorioRepository.actualizarDatos(paciente);
+        return paciente;
     }
 }

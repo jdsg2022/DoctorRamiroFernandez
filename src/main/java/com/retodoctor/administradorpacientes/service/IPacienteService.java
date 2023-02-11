@@ -8,5 +8,6 @@ public interface IPacienteService {
     Set<Paciente> pacientesRegistrados();
     Paciente agregarPaciente(Paciente paciente);
     Paciente eliminarPaciente(Paciente paciente);
+    Paciente actualizarDatosPaciente(Paciente paciente);
 
 }

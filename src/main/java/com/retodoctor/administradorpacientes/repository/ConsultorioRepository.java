@@ -17,13 +17,20 @@ public class ConsultorioRepository {
                 new Paciente(1120345434,"Mariana Salazar",25,"12/9/1995","soltera","cll 30 # 23-22"),
                 new Paciente(1034234543,"Claudia Lopez",45,"12/9/1981","viuda","crr 50 # 41-14")));
     }
-    public void agregarPaciente(){
-
+    public void agregarPaciente(Paciente paciente){
+        listaPacientes.add(paciente);
     }
-    public void eliminarPaciente(){
-
+    public void eliminarPaciente(Paciente paciente){
+        listaPacientes.remove(paciente);
     }
-    public void actualizarDatos(){
+    public void actualizarDatos(Paciente paciente){
+    }
 
+    public Set<Paciente> getListaPacientes() {
+        return listaPacientes;
+    }
+
+    public void setListaPacientes(Set<Paciente> listaPacientes) {
+        this.listaPacientes = listaPacientes;
     }
 }
