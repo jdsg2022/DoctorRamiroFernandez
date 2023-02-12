@@ -2,10 +2,11 @@ package com.retodoctor.administradorpacientes.models;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Date;
 import java.util.List;
 
 public class CitaMedica {
-    private LocalDate fecha;
+    private Date fecha;
     private LocalTime hora;
     private String lugar;
     private String motivoConsulta;
@@ -13,7 +14,7 @@ public class CitaMedica {
     private List<Paciente> listaPacientes;
     private Doctor doctor;
 
-    public CitaMedica(LocalDate fecha, LocalTime hora, String lugar,
+    public CitaMedica(Date fecha, LocalTime hora, String lugar,
                       String motivoConsulta, int horaFinalizacion,
                       List<Paciente> listaPacientes, Doctor doctor) {
         this.fecha = fecha;
@@ -25,11 +26,11 @@ public class CitaMedica {
         this.doctor = doctor;
     }
 
-    public LocalDate getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
