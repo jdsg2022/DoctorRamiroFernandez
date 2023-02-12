@@ -24,4 +24,73 @@ public class CitaMedica {
         this.listaPacientes = listaPacientes;
         this.doctor = doctor;
     }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public LocalTime getHora() {
+        return hora;
+    }
+
+    public void setHora(LocalTime hora) {
+        this.hora = hora;
+    }
+
+    public String getLugar() {
+        return lugar;
+    }
+
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
+
+    public String getMotivoConsulta() {
+        return motivoConsulta;
+    }
+
+    public void setMotivoConsulta(String motivoConsulta) {
+        this.motivoConsulta = motivoConsulta;
+    }
+
+    public int getHoraFinalizacion() {
+        return horaFinalizacion;
+    }
+
+    public void setHoraFinalizacion(int horaFinalizacion) {
+        this.horaFinalizacion = horaFinalizacion;
+    }
+
+    public List<Paciente> getListaPacientes() {
+        return listaPacientes;
+    }
+
+    public void setListaPacientes(List<Paciente> listaPacientes) {
+        this.listaPacientes = listaPacientes;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    @Override
+    public String toString() {
+        return "CitaMedica{" +
+                "fecha=" + fecha +
+                ", hora=" + hora +
+                ", lugar='" + lugar + '\'' +
+                ", motivoConsulta='" + motivoConsulta + '\'' +
+                ", horaFinalizacion=" + horaFinalizacion +
+                ", listaPacientes=" + listaPacientes +
+                ", doctor=" + doctor +
+                '}';
+    }
 }
