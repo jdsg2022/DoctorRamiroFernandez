@@ -14,7 +14,7 @@ public class CitaRepository {
         listaCitas = new HashMap<>();
     }
     public void agregarCita(CitaMedica citaMedica){
-        listaCitas.put(1,citaMedica);
+       listaCitas.put(1,citaMedica);
     }
 
     public Map<Integer, CitaMedica> getListaCitas() {

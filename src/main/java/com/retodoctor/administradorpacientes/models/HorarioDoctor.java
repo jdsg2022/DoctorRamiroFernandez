@@ -2,6 +2,7 @@ package com.retodoctor.administradorpacientes.models;
 
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.List;
 
 public class HorarioDoctor {
     private LocalTime horaInicio;
@@ -11,5 +12,4 @@ public class HorarioDoctor {
         this.horaInicio = LocalTime.of(8,0);
         this.horaFinal = LocalTime.of(18,0);
     }
-
 }
