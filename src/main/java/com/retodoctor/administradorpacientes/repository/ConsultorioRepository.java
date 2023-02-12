@@ -8,10 +8,11 @@ import java.util.Set;
 
 @Repository
 public class ConsultorioRepository {
-    private String nombre;
+    private final String nombre;
     private Set<Paciente> listaPacientes;
-    public ConsultorioRepository(String nombre) {
-        this.nombre = nombre;
+
+    public ConsultorioRepository() {
+        this.nombre = "Consultorio Ramiro Fernandez";
         listaPacientes = new HashSet<>(Set.of(
                 new Paciente(1011546787,"Mario Ortiz",34,"12/9/1988","casado","cll 10 # 45-24"),
                 new Paciente(1120345434,"Mariana Salazar",25,"12/9/1995","soltera","cll 30 # 23-22"),
@@ -32,5 +33,13 @@ public class ConsultorioRepository {
 
     public void setListaPacientes(Set<Paciente> listaPacientes) {
         this.listaPacientes = listaPacientes;
+    }
+
+    @Override
+    public String toString() {
+        return "ConsultorioRepository{" +
+                "nombre='" + nombre + '\'' +
+                ", listaPacientes=" + listaPacientes +
+                '}';
     }
 }

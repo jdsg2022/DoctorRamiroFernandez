@@ -22,11 +22,11 @@ public class PacienteController {
         return new ResponseEntity(iPacienteService.agregarPaciente(paciente), HttpStatus.CREATED);
     }
     @DeleteMapping("remove/paciente")
-    public ResponseEntity eliminarPacientes(@RequestAttribute Paciente paciente){
+    public ResponseEntity eliminarPacientes(@RequestBody Paciente paciente){
         return new ResponseEntity(iPacienteService.eliminarPaciente(paciente), HttpStatus.ACCEPTED);
     }
     @PutMapping("change/data")
-    public ResponseEntity actualizarDatos(@RequestAttribute Paciente paciente){
+    public ResponseEntity actualizarDatos(@RequestBody Paciente paciente){
         return new ResponseEntity(iPacienteService.actualizarDatosPaciente(paciente), HttpStatus.ACCEPTED);
     }
 
