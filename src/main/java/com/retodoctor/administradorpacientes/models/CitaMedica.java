@@ -7,23 +7,25 @@ import java.util.List;
 
 public class CitaMedica {
     private Date fecha;
+    private String estado;
     private LocalTime hora;
     private String lugar;
     private String motivoConsulta;
     private int horaFinalizacion;
-    private List<Paciente> listaPacientes;
-    private Doctor doctor;
+    private Paciente paciente;
+    private  HorarioDoctor horario;
 
     public CitaMedica(Date fecha, LocalTime hora, String lugar,
                       String motivoConsulta, int horaFinalizacion,
-                      List<Paciente> listaPacientes, Doctor doctor) {
+                      Paciente paciente, HorarioDoctor horario, String estado) {
         this.fecha = fecha;
         this.hora = hora;
         this.lugar = lugar;
         this.motivoConsulta = motivoConsulta;
         this.horaFinalizacion = horaFinalizacion;
-        this.listaPacientes = listaPacientes;
-        this.doctor = doctor;
+        this.paciente = paciente;
+        this.horario = horario;
+        this.estado = estado;
     }
 
     public Date getFecha() {
@@ -66,32 +68,41 @@ public class CitaMedica {
         this.horaFinalizacion = horaFinalizacion;
     }
 
-    public List<Paciente> getListaPacientes() {
-        return listaPacientes;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setListaPacientes(List<Paciente> listaPacientes) {
-        this.listaPacientes = listaPacientes;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public Doctor getDoctor() {
-        return doctor;
+    public Paciente getPaciente() {
+        return paciente;
     }
 
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public HorarioDoctor getHorario() {
+        return horario;
+    }
+
+    public void setHorario(HorarioDoctor horario) {
+        this.horario = horario;
     }
 
     @Override
     public String toString() {
         return "CitaMedica{" +
                 "fecha=" + fecha +
+                ", estado='" + estado + '\'' +
                 ", hora=" + hora +
                 ", lugar='" + lugar + '\'' +
                 ", motivoConsulta='" + motivoConsulta + '\'' +
                 ", horaFinalizacion=" + horaFinalizacion +
-                ", listaPacientes=" + listaPacientes +
-                ", doctor=" + doctor +
+                ", paciente=" + paciente +
+                ", horario=" + horario +
                 '}';
     }
 }

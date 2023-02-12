@@ -9,7 +9,23 @@ public class HorarioDoctor {
     private LocalTime horaFinal;
 
     public HorarioDoctor(LocalTime horaInicio, LocalTime horaFinal) {
-        this.horaInicio = LocalTime.of(8,0);
-        this.horaFinal = LocalTime.of(18,0);
+        this.horaInicio = horaInicio;
+        this.horaFinal = horaFinal;
+    }
+
+    public LocalTime getHoraInicio() {
+        return horaInicio;
+    }
+
+    public void setHoraInicio(LocalTime horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+
+    public LocalTime getHoraFinal() {
+        return horaFinal;
+    }
+
+    public void setHoraFinal(LocalTime horaFinal) {
+        this.horaFinal = horaFinal;
     }
 }

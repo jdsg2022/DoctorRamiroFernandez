@@ -1,10 +1,11 @@
 package com.retodoctor.administradorpacientes.service;
 
 import com.retodoctor.administradorpacientes.models.CitaMedica;
+import com.retodoctor.administradorpacientes.models.Doctor;
 
-import java.util.Map;
+import java.util.List;
 
 public interface ICitaService {
-    Map<Integer, CitaMedica> listaCitas();
-    CitaMedica agendarCita(CitaMedica citaMedica);
+    List<CitaMedica> listaCitas();
+    CitaMedica agendarCita(CitaMedica citaMedica, Doctor doctor);
 }

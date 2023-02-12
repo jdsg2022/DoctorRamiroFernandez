@@ -1,6 +1,7 @@
 package com.retodoctor.administradorpacientes.crontrollers;
 
 import com.retodoctor.administradorpacientes.models.CitaMedica;
+import com.retodoctor.administradorpacientes.models.Doctor;
 import com.retodoctor.administradorpacientes.models.HistoriaMedica;
 import com.retodoctor.administradorpacientes.service.ICitaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class CitaController {
         return new ResponseEntity(iCitaService.listaCitas(), HttpStatus.FOUND);
     }
     @PostMapping("add/cita")
-    public ResponseEntity agendarCita(@RequestBody CitaMedica citaMedica){
-        return new ResponseEntity(iCitaService.agendarCita(citaMedica), HttpStatus.CREATED);
+    public ResponseEntity agendarCita(@RequestBody CitaMedica citaMedica, Doctor doctor){
+        return new ResponseEntity(iCitaService.agendarCita(citaMedica, doctor), HttpStatus.CREATED);
     }
 }
